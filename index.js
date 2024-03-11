@@ -67,3 +67,21 @@ const showAnimation = () => {
 		result.textContent = decimalToBInary(5);
 	}, 20000);
 };
+
+// Function to check user input
+const checkUserInput = () => {
+	const inputInt = parseInt(numberInput.value);
+
+	if (!numberInput.value || isNaN(inputInt)) {
+		alert('Please provide a decimal number');
+		return;
+	}
+
+	if (inputInt === 5) {
+		showAnimation();
+		return;
+	}
+
+	result.textContent = decimalToBinary(inputInt);
+	numberInput.value = '';
+};
