@@ -88,3 +88,10 @@ const checkUserInput = () => {
 
 // Convert button event listener
 convertBtn.addEventListener('click', checkUserInput);
+
+// Enter key event listener
+numberInput.addEventListener('keydown', (e) => {
+	if (e.key === 'Enter') {
+		checkUserInput();
+	}
+});
